@@ -1,0 +1,7 @@
+
+if __name__ == '__main__':
+    n = int(input())
+    lst = (range(0,n))
+    
+    for i in lst:
+        print(i**2)
