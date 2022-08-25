@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+
+HOME PAGE
+
+{% endblock %}
+
+{% block body %}
+
+
+<form action="{{ url_for('generate_url') }}" method = 'post'>
+    <label for="">Enter the url</label>
+    <input type="url" placeholder="https://vijaydinanath.com" name="in_1" ><br>
+    <button>Generate</button>
+
+</form>
+
+
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block title %}
+History
+{% endblock %}
+
+{% block body %}
+<h1>This is the previous history of shortened links </h1>
+<thead>
+    <table>
+     <tr>
+         <th>id</th>
+         <th>Long</th>
+         <th>Short</th>
+     </tr>
+ </thead>
+ 
+ <tbody>
+     {% for url in get_url %}
+     <tr>
+         <td>{{ url.id }}</td>
+         <td>{{ url.long }}</td>
+         <td>{{ url.short }}</td>
+ 
+     </tr>
+     {% endfor %}
+ </tbody>
+    </table>
+
+{% endblock %}
+
