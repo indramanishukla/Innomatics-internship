@@ -28,8 +28,8 @@ df['city'] = [i[-1] for i in df.address.str.split()]
 
 in_col, out_col = st.columns(2)
 
-lat = in_col.number_input('Enter your latitude in Britain', 51.50)
-lon = in_col.number_input('Enter your longitude in Britain', 0.12)
+lat = in_col.number_input('Enter your latitude in Britain', min_value=-90, max_value=90, value=51.5, step=1)
+lon = in_col.number_input('Enter your longitude in Britain', min_value=-180, max_value=180, value=0.12, step=1)
 find = pd.DataFrame([[lat, lon]], columns=['lat', 'lon'])
 out_col.text('Here you are located!')
 out_col.map(find)
