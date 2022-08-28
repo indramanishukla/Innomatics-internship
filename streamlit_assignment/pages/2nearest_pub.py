@@ -46,7 +46,7 @@ def nearest(latitude, lat, longitude, lon):
     return near
 
 
-
+st.text('Address of pubs near')
 df['nearest_eucledian_dist'] = nearest(df.latitude, lat, df.longitude, lon)
 data = df.sort_values('nearest_eucledian_dist', ascending=True).head()
 st.write(data)
