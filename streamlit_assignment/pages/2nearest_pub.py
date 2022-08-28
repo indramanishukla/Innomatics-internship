@@ -51,6 +51,6 @@ df['nearest_eucledian_dist'] = nearest(df.latitude, lat, df.longitude, lon)
 data = df.sort_values('nearest_eucledian_dist', ascending=True).head()
 st.write(data)
 st.text('Five Pubs Nearest to You, Cheers!!!')
-st.map(data)
+st.map(data) 
 
 # st.write(dist)
