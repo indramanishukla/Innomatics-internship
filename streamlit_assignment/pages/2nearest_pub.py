@@ -14,6 +14,7 @@ my_file = path+'/data/open_pubs.csv'
 df = pd.read_csv(my_file, header=None, names=['fsa_id','name','address','postcode','easting','northing','latitude','longitude','local_authority'])
 
 
+
 st.title('Pubs near me!')
 st.write('This is section where you can search pubs near you, give your coordinates.')
 
