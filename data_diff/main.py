@@ -69,7 +69,10 @@ if __name__=="__main__":
     # df1['Date'] = df1.apply(lambda x: dt.datetime.strptime(x.Date, "%Y-%m-%d").date(), axis=1)
     # df2['Date'] = df2.apply(lambda x: dt.datetime.strptime(x.Date, "%Y-%m-%d").date(), axis=1)
     
-    print(df1.info())
-    empty_df = compare_df(df1, df2, ['Name'])
+
+    # sample size is default set to 50 whereas decimal_precision is 20 by default 
+    empty_df = compare_df(df1, df2, ['Name'], sample_size=20, decimal_precision=6)
+    empty_df2 = compare_df(df1, df2, ['Name'])
+
     print(empty_df)
     # print(df)

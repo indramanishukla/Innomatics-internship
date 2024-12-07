@@ -92,7 +92,10 @@ if __name__=="__main__":
     print(df1.show())
     print(df2.show())
 
-    empty_df = compare_df(df1, df2, ['Name'])
+    # sample size is default set to 50 whereas decimal_precision is 20 by default 
+    empty_df = compare_df(df1, df2, ['Name'], sample_size=20, decimal_precision=6)
+    empty_df2 = compare_df(df1, df2, ['Name'])
+
     print(empty_df.show())
 
 
